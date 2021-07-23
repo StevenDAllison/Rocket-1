@@ -39,6 +39,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -74,9 +75,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(21, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.Size = new System.Drawing.Size(53, 17);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Xfuel =";
+            this.label3.Text = "Max t =";
             // 
             // label4
             // 
@@ -121,9 +122,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(21, 224);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 17);
+            this.label5.Size = new System.Drawing.Size(240, 17);
             this.label5.TabIndex = 9;
-            this.label5.Text = "t = 50s, mo = 50kg, g = 9.81m/s^2";
+            this.label5.Text = "t = 50s, mfinal = 50kg, g = 9.81m/s^2";
             // 
             // richTextBox1
             // 
@@ -133,11 +134,21 @@
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(24, 258);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Xfuel =";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox4);
@@ -169,6 +180,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label6;
     }
 }
 
