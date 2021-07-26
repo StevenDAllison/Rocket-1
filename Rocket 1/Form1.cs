@@ -64,11 +64,17 @@ namespace Rocket_1
                 double Vold = V;
                 m = m - Xfuel * dt;
                 V = (Ve * Math.Log(mo / m)) - g * t;
-                a = (V - Vold) / dt;
-                alt = alt + 0.5 * (V + Vold) * dt;
                 double rho = 1.225 * Math.Exp(-0.00013 * alt);
                 Q = 0.5 * rho * V * V;
-
+                //drag model
+                double Cd = 0.025;
+                double S0 = Math.PI * 1.5 * 1.5;
+                double drag = 0.5 * rho * V * V * S0 * Cd;
+                double deltaV = drag / m * dt;
+                V = V - deltaV;
+                // calculate a and alt using new V value
+                a = (V - Vold) / dt;
+                alt = alt + 0.5 * (V + Vold) * dt;
                 //show result on screen
                 richTextBox1.AppendText(t.ToString("n0") + "\t" + m.ToString("n0") + "\t" + V.ToString("n1") + "\t" +
                     a.ToString("n1") + "\t" + alt.ToString("n1") + "\t" + Q.ToString("n1") + "\n");
